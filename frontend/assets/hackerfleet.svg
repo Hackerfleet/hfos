@@ -76,7 +76,7 @@
         </dc:subject>
         <dc:description>Uncolored Hackerfleet Logo
 
-See github.com/hackerfleet/hfos for more information</dc:description>
+See github.com/Hackerfleet/hfos for more information</dc:description>
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
       </cc:Work>

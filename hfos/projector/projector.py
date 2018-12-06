@@ -21,29 +21,36 @@
 __author__ = "Heiko 'riot' Weinen"
 __license__ = "AGPLv3"
 
-from setuptools import setup, find_packages
+"""
 
-setup(name="hfos",
-      version="1.2.1",
-      description="hfos - an operating system for vessels",
-      author="Hackerfleet Community",
-      author_email="riot@c-base.org",
-      url="https://github.com/Hackerfleet/hfos",
-      license="GNU Affero General Public License v3",
-      packages=find_packages(),
-      long_description="""HFOS
-====
 
-A module to bundle Hackerfleet's Isomer modules to a ship computer operating system.
+Module: Projector
+=================
 
-This software package is a plugin module for Isomer
-""",
-      dependency_links=[],
-      install_requires=[
-          'isomer>=1.2.0'
-      ],
-      entry_points="""[isomer.components]
-    [isomer.schemata]
-    """,
-      test_suite="tests.main.main",
-      )
+
+"""
+
+from isomer.component import ConfigurableComponent, handler
+from isomer.database import objectmodels
+from isomer.events.system import authorized_event
+
+
+class Projector(ConfigurableComponent):
+    """
+    Manages projections, scenes etc.
+    """
+    channel = 'isomer-web'
+
+    configprops = {
+    }
+
+    def __init__(self, *args):
+        """
+        Initialize the Projector component.
+
+        :param args:
+        """
+
+        super(Projector, self).__init__("COUNT", *args)
+
+        self.log("Started")
