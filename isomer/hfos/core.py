@@ -24,7 +24,7 @@ __license__ = "AGPLv3"
 """
 
 
-Module: Projector
+Module: HFOS Core
 =================
 
 
@@ -35,9 +35,9 @@ from isomer.database import objectmodels
 from isomer.events.system import authorized_event
 
 
-class Projector(ConfigurableComponent):
+class HFOSCore(ConfigurableComponent):
     """
-    Manages projections, scenes etc.
+    Hackerfleet Operating System core component
     """
     channel = 'isomer-web'
 
@@ -46,11 +46,11 @@ class Projector(ConfigurableComponent):
 
     def __init__(self, *args):
         """
-        Initialize the Projector component.
+        Initialize the HFOS Core.
 
         :param args:
         """
 
-        super(Projector, self).__init__("COUNT", *args)
+        super(HFOSCore, self).__init__("HFOSCore", *args)
 
         self.log("Started")

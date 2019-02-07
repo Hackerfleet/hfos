@@ -1,5 +1,5 @@
 # coding=utf-8
-"""Countables components for HFOS"""
+"""HFOS"""
 
 __author__ = "Heiko 'riot' Weinen <riot@c-base.org>"
 __license__ = "AGPLv3"
