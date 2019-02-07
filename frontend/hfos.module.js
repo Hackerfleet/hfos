@@ -22,4 +22,14 @@
  * """
  */
 
-import 'hfos-design.scss'
+import './hfos-design.scss';
+
+import angular from 'angular';
+
+export default angular
+    .module('main.app.hfos', [])
+    .run(function(user) {
+        user.logo_url = '/src/components/hfos/assets/hackerfleet.svg';
+        user.menu_icon_url = '/src/components/hfos/assets/hackerfleet32.svg';
+    })
+    .name;
