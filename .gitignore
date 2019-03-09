@@ -1,4 +1,5 @@
 # build data
+MANIFEST.in
 build
 dist
 docs/build
