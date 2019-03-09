@@ -5,7 +5,7 @@
  * __license__ = """
  * Hackerfleet Operating System
  * ============================
- * Copyright (C) 2011- 2018 riot <riot@c-base.org> and others.
+ * Copyright (C) 2011- 2019 riot <riot@c-base.org> and others.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
