@@ -25,7 +25,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="hfos",
-    version="1.2.1",
+    version="1.3.0",
     description="hfos - an operating system for vessels",
     author="Hackerfleet Community",
     author_email="riot@c-base.org",
