@@ -23,6 +23,9 @@ __license__ = "AGPLv3"
 
 from setuptools import setup, find_packages
 
+with open('README.rst', 'r') as f:
+    readme = f.read()
+
 setup(
     name="hfos",
     version="1.3.0",
@@ -32,11 +35,11 @@ setup(
     url="https://github.com/Hackerfleet/hfos",
     license="GNU Affero General Public License v3",
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
-        'Framework :: Isomer :: 1',
+        # 'Framework :: Isomer :: 1',
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
-        'Operating System :: Linux',
+        'Operating System :: POSIX :: Linux',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3.5',
@@ -48,13 +51,7 @@ setup(
     ],
     packages=find_packages(),
     include_package_data=True,
-    long_description="""HFOS
-====
-
-A module to bundle Hackerfleet's Isomer modules to a ship computer operating system.
-
-This software package is a plugin module for Isomer
-""",
+    long_description=readme,
     dependency_links=[],
     install_requires=[
         'isomer',
