@@ -61,7 +61,7 @@ setup(
         'hfos-comms',
         'hfos-crew',
         'hfos-dashboard',
-        'hfos-dev',
+        # 'hfos-dev',
         'hfos-equipment',
         'hfos-logbook',
         'hfos-map',
