@@ -50,6 +50,7 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython'
     ],
     packages=find_packages(),
+    package_data={'hfos': ['../docs/*', '../frontend/*']},
     include_package_data=True,
     long_description=readme,
     dependency_links=[],
@@ -77,3 +78,5 @@ setup(
     """,
     test_suite="tests.main.main",
 )
+
+
