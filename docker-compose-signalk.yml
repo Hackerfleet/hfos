@@ -1,0 +1,40 @@
+version: '3.2'
+
+services:
+  isomer:
+    image: hackerfleet/hfos:latest
+    command: iso launch
+    environment:
+      ISOMER_DBHOST: db:27017
+      ISOMER_LAUNCH_WEB_ADDRESS: 0.0.0.0
+      ISOMER_COMPONENT_SIGNALK_HOSTNAME: signalk
+      ISOMER_COMPONENT_SIGNALK_PROTOCOL_VERSION: v1
+    stdin_open: true
+    tty: true
+    depends_on:
+      - db
+    ports:
+      - 0.0.0.0:8000:8000
+    networks:
+      - dock_net
+  db:
+    image: mongo:4.0.14
+    volumes:
+      - dbdata:/data/db
+    ports:
+      - target: 27017
+        published: 27027
+        mode: host
+    networks:
+      - dock_net
+
+  signalk:
+    image: signalk/signalk-server:master
+
+
+volumes:
+  dbdata:
+
+networks:
+  dock_net:
+    driver: bridge
